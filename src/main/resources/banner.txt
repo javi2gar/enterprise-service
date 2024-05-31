@@ -1,0 +1,38 @@
+${AnsiColor.BLUE}
+----------------------------------------------------------------------------------------------------------------------------------------
+ _______ __   _ _______ _______  ______  _____   ______ _____ _______ _______      _______ _______  ______ _    _ _____ _______ _______
+ |______ | \  |    |    |______ |_____/ |_____] |_____/   |   |       |______      |______ |______ |_____/  \  /    |   |       |______
+ |______ |  \_|    |    |______ |    \_ |       |    \_ __|__ |_____  |______      ______| |______ |    \_   \/   __|__ |_____  |______
+
+${AnsiColor.WHITE}
+
+
+                   ________                                                       _     ________  ____
+                   `MMMMMMMb.         68b                                        dM.    `MMMMMMMb.`MM'
+                    MM    `Mb         Y89                                       ,MMb     MM    `Mb MM
+                    MM     MM ___  __ ___   ____     ____     ____              d'YM.    MM     MM MM
+                    MM     MM `MM 6MM `MM  6MMMMb.  6MMMMb   6MMMMb\           ,P `Mb    MM     MM MM
+                    MM    .M9  MM69 "  MM 6M'   Mb 6M'  `Mb MM'    `           d'  YM.   MM    .M9 MM
+                    MMMMMMM9'  MM'     MM MM    `' MM    MM YM.               ,P   `Mb   MMMMMMM9' MM
+                    MM         MM      MM MM       MMMMMMMM  YMMMMb           d'    YM.  MM        MM
+                    MM         MM      MM MM       MM            `Mb         ,MMMMMMMMb  MM        MM
+                    MM         MM      MM YM.   d9 YM    d9 L    ,MM         d'      YM. MM        MM
+                   _MM_       _MM_    _MM_ YMMMM9   YMMMM9  MYMMMM9        _dM_     _dMM_MM_      _MM_
+
+
+
+${AnsiColor.BLUE}
+                              Developed by: https://www.linkedin.com/in/vernedevelop
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+${AnsiColor.YELLOW}
+        Spring Boot Version ${spring-boot.formatted-version}
+        Java Version: ${java.version}
+${AnsiColor.BLUE}
+----------------------------------------------------------------------------------------------------------------------------------------
+        Project name: ${spring.application.name}
+        Project version: ${spring.application.version}
+        Organization: ${spring.application.organization}
+${AnsiColor.BLACK}
+${AnsiColor.DEFAULT}
