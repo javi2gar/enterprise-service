@@ -82,8 +82,6 @@ it is advisable to use native SQL to check that the type conversion is correct, 
 ### Prices Data
 ![bbdd_data.png](src/main/resources/static/images/bbdd_data.png)
 
-![img.png](src/main/resources/static/images/bbdd_data.png)
-
 [Access to bbdd by h2_console](http://localhost:8081/h2-console/)
 
 
@@ -129,4 +127,17 @@ to run the tests and check the status of the project.
 
 ![circleci.png](src/main/resources/static/images/circleci.png)
 
+
+### SonarCloud
+
+The project has been configured with <span style=color:red;>*_SonarCloud_*</span>. 
+And teh plugin <span style=color:lightred;>*_SonarLint_*</span> has been installed in the IDE.
+
+![sonar.png](src/main/resources/static/images/sonar.png)
+
+Used for fixing code smells, bugs, and security vulnerabilities.
+
+![sonar_code_fixed.png](src/main/resources/static/images/sonar_code_fixed.png)
+
+![sonar_code_fixed_2.png](src/main/resources/static/images/sonar_code_fixed_2.png)
 
