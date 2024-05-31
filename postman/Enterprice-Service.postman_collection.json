@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "3733e300-c4f7-4f13-be8b-24c5439df1c2",
+		"name": "Enterprice-Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26601780"
+	},
+	"item": [
+		{
+			"name": "Price",
+			"item": [
+				{
+					"name": "Test 1: request at 10:00 on the 14th for product 35455 for brand 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "brand-id",
+								"value": "{{brand-id}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/prices?productId=35455&requestDate=2020-06-14T10:00:00",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"prices"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "requestDate",
+									"value": "2020-06-14T10:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test 2: request at 16:00 on the 14th for product 35455 for brand 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "brand-id",
+								"value": "{{brand-id}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/prices?productId=35455&requestDate=2020-06-14T16:00:00",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"prices"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "requestDate",
+									"value": "2020-06-14T16:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test 3: request at 21:00 on the 14th for product 35455 for brand 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "brand-id",
+								"value": "{{brand-id}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/prices?productId=35455&requestDate=2020-06-14T21:00:00",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"prices"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "requestDate",
+									"value": "2020-06-14T21:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test 4: request at 10:00 on the 15th for product 35455 for brand 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "brand-id",
+								"value": "{{brand-id}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/prices?productId=35455&requestDate=2020-06-15T10:00:00",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"prices"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "requestDate",
+									"value": "2020-06-15T10:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test 5: request at 21:00 on the 16th for product 35455 for brand 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "brand-id",
+								"value": "{{brand-id}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/v1/prices?productId=35455&requestDate=2020-06-16T21:00:00",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"prices"
+							],
+							"query": [
+								{
+									"key": "productId",
+									"value": "35455"
+								},
+								{
+									"key": "requestDate",
+									"value": "2020-06-16T21:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Request Date is between Start Date and End Date for all products\", () => {",
+							"    const responseJson = pm.response.json();",
+							"    responseJson.prices.forEach(function(price) {",
+							"        pm.expect(price.productId).to.equal(35455);",
+							"        pm.expect(price.brandId).to.eql(1);",
+							"        const requestDate = new Date(pm.request.url.query.get('requestDate'));",
+							"        const startDate = new Date(price.startDate);",
+							"        const endDate = new Date(price.endDate);",
+							"        pm.expect(requestDate >= startDate && requestDate <= endDate).to.be.true;",
+							"    });",
+							"});"
+						]
+					}
+				}
+			]
+		}
+	]
+}
