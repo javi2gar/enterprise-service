@@ -7,7 +7,7 @@ create table PRICES
     PRODUCT_ID  BIGINT          default 0 not null                  ,
     PRIORITY    NUMERIC(1)      default 1 Not null                  ,
     PRICE       NUMERIC(20,2)   default 0 not null                  ,
-    CURR        CHAR(3)         default 'EUR' not null              ,
+    CURR        VARCHAR(3)         default 'EUR' not null              ,
     constraint PK_PRICES
         primary key (BRAND_ID, PRICE_LIST, PRODUCT_ID)
 );
