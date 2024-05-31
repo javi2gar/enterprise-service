@@ -3,7 +3,6 @@ package com.enterprise.service.adapter.in.config;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
-import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.servers.Server;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -39,9 +38,6 @@ public class SwaggerConfig {
                                 .name(organization)
                                 .email("javi2gar@gmail.com")
                                 .url("https://enterprise-service-api.com"))
-                        .license(new License()
-                                .name("MIT")
-                                .url("https://opensource.org/licenses/MIT"))
                         .termsOfService("https://enterprise-service-api.com"))
                 .servers(List.of(
                         new Server().url("//localhost:8081").description("Local server"),

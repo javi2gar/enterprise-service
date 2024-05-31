@@ -1,0 +1,150 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Enterprise Service API",
+    "description": "This service is the primary API consumed by Customer User Interface (CUI) and other Internal Services (EIS) to obtain item information.",
+    "termsOfService": "https://enterprise-service-api.com",
+    "contact": {
+      "name": "Javier Garcia",
+      "url": "https://enterprise-service-api.com",
+      "email": "javi2gar@gmail.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    "version": "0.0.1-SNAPSHOT"
+  },
+  "servers": [
+    {
+      "url": "//localhost:8081",
+      "description": "Local server"
+    },
+    {
+      "url": "//dev-enterprise-service-api.com",
+      "description": "Development server"
+    },
+    {
+      "url": "//qa-enterprise-service-api.com",
+      "description": "QA server"
+    },
+    {
+      "url": "//enterprise-service-api.com",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/api/v1/prices": {
+      "get": {
+        "tags": [
+          "price-controller"
+        ],
+        "summary": "Get all prices according to brand and product on a date",
+        "operationId": "getAllPricesByBrandIdAndProductIdAndRequestDate",
+        "parameters": [
+          {
+            "name": "brand-id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "maximum": 32767,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "productId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "maximum": 9223372036854775807,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "requestDate",
+            "in": "query",
+            "description": "Date in ISO 8601 format: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "All prices returned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PriceResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid fields"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Prices not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Price": {
+        "type": "object",
+        "properties": {
+          "productId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "brandId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "feeName": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "pvp": {
+            "type": "number"
+          }
+        }
+      },
+      "PriceResponse": {
+        "type": "object",
+        "properties": {
+          "prices": {
+            "maxItems": 10000,
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Price"
+            }
+          }
+        }
+      }
+    }
+  }
+}
