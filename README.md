@@ -1,4 +1,9 @@
+> <small style="font-size:12px;"><span style="color:orange;"> IMPORTANT !!! &nbsp;&nbsp;</span>This project is <span style=color:red;>**FAKE**</span>, the PURPOSE IS EXCLUSIVELY FOR **SELF-LEARNING** and to serve as a sample of the creation ofa REST microservice</small>
+
+
+
 # <span style=color:DodgerBlue;> Enterprise Service </span>
+
 This service is the primary API consumed by Customer User Interface (CUI) 
 and other Internal Services (EIS) to obtain item information.
 
@@ -162,7 +167,7 @@ Note: The environment file is not necessary, but it is used to define the variab
 ## API Security Audit
 
 The results of the **security audit are very low**, and the _**<span style=color:red;> API is not secure**_</span> , it's necessary to improve the 
-security of the API. For example, librearies like <span style=color:LightGreen;>*_Spring Security_*</span> 
+security of the API. For example, libraries like <span style=color:LightGreen;>*_Spring Security_*</span> 
 can be used to secure the API, or <span style=color:LightGreen;>*_JWT_*</span> to secure the endpoints.
 
 ### 42Crunch
