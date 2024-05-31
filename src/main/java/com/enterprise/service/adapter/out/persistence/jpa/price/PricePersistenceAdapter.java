@@ -25,6 +25,14 @@ public class PricePersistenceAdapter implements PriceFinder {
     private final PriceRepository priceRepository;
     private static final PriceDBMapper priceMapper = Mappers.getMapper(PriceDBMapper.class);
 
+    /**
+     * Find all prices by brand id, product id and request date
+     *
+     * @param brandId     the brand id
+     * @param productId   the product id
+     * @param requestDate the request date
+     * @return the list of prices
+     */
     @Override
     @Transactional(readOnly = true)
     public List<Price> findAllPricesByBrandIdAndProductIdAndRequestDate(short brandId, Long productId, LocalDateTime requestDate) {

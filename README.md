@@ -61,7 +61,7 @@ The database is an <span style=color:DeepSkyBlue;>*_H2 in-memory database_*</spa
 The schema is created at the start of the application and the data is loaded from the files `.sql`.
 
 The schema is created at the beginning of the application and the data is loaded 
-by migration (<span style=color:Coral;>*_Flyway_*</span> is used for this). The data is loaded from the files `.sql`.
+by migration (<span style=color:Coral;>*_Flyway_*</span> is used for this).
 > **NOTE:**   The main table lacks a unique identifier, so it has been proposed to take several fields as primary key 
 (just as old business management systems did). In some cases, to obtain data in this type of table, 
 it is advisable to use native SQL to check that the type conversion is correct, since in some DBMSs it could cause problems.
@@ -96,8 +96,47 @@ CONECTION DATA:
 
 ### Unit Testing
 
+![unit_test.png](src/main/resources/static/images/unit_test.png)
+
+* Repository layer (@DataJpaTest): <span style=color:yellow;>*_JUnit_*</span> is used for unit testing 
+
+    ![jpa_repository.png](src/main/resources/static/images/jpa_repository.png)
+
+
+* Service layer (@SpringBootTest): <span style=color:GreenYellow;>*_Mockito_*</span> is used for unit testing
+
+    ![service_layer.png](src/main/resources/static/images/service_layer.png)
+
+
+* Controller layer (@WebMvcTest): <span style=color:LightGreen;>*_MockMvc_*</span> is used for unit testing
+
+    ![controller_layer.png](src/main/resources/static/images/controller_layer.png)
+
 
 ### Integration Testing
+
+### Coverage Testing
+
+On the next image, you can see the coverage of the tests. The <span style=color:SeaBlue;>*_IntelliJ IDEA_*</span> 
+generated the report of the coverage of the tests.
+
+![coverage.png](src/main/resources/static/images/coverage.png)
+
+You can export this report press the right button and select the option `Export Coverage Data`. 
+And the report is saved in the folder `exportToHTML/index.html`.
+
+
+![img.png](src/main/resources/static/images/coverage_ide_report.png)
+
+
+### JaCoCo
+The project has been configured with <span style=color:LightGreen;>*_JaCoCo_*</span> to check the coverage of the tests.
+
+And the coverage report is saved in the folder `target/site/jacoco/index.html`.
+
+[View full report](target/site/jacoco/index.html)
+
+![coverage_report.png](src/main/resources/static/images/coverage_report.png)
 
 ### Postman
 
@@ -120,6 +159,22 @@ Note: The environment file is not necessary, but it is used to define the variab
 [View full report](postman/newman_report/Enterprice-Service-report.html)
 
 
+## API Security Audit
+
+The results of the **security audit are very low**, and the _**<span style=color:red;> API is not secure**_</span> , it's necessary to improve the 
+security of the API. For example, librearies like <span style=color:LightGreen;>*_Spring Security_*</span> 
+can be used to secure the API, or <span style=color:LightGreen;>*_JWT_*</span> to secure the endpoints.
+
+### 42Crunch
+
+The project has been configured with <span style=color:pink;>*_42Crunch_*</span> to check the security of the API.
+
+![42crunch_report.png](src/main/resources/static/images/42crunch_report.png)
+
+![42crunch_problems.png](src/main/resources/static/images/42crunch_problems.png)
+
+
+
 ### CircleCI
 
 The project has been configured with <span style=color:Violet;>*_CircleCI_*</span> 
@@ -140,4 +195,68 @@ Used for fixing code smells, bugs, and security vulnerabilities.
 ![sonar_code_fixed.png](src/main/resources/static/images/sonar_code_fixed.png)
 
 ![sonar_code_fixed_2.png](src/main/resources/static/images/sonar_code_fixed_2.png)
+
+
+## Installation
+
+### Clone the repository
+
+```shell
+git clone https://github.com/javi2gar/enterprise-service.git
+``` 
+
+### Requirements
+
+* Java 17
+* Maven
+
+### Run the project
+Go to the root of the project and run the following command:
+
+```shell
+mvn spring-boot:run
+```
+
+
+### Environment variables
+The environment variables are defined in the file `application.properties`.
+This project is configured to run on port 8081. And the database is an H2 in-memory database.
+IS for local testing, for production it is recommended to use a database server, and configure t
+he connection in the file `application.properties`, or add separated files of configuration by environment, 
+by example `application-dev.properties`, `application-prod.properties`,
+and use environment variables, and use the command `--spring.profiles.active=dev` or `--spring.profiles.active=prod`.
+
+You can hide the sensitive data in the file `application.properties` and use environment variables. 
+For example, the database password, the secret key, etc.
+In thi case you can hide on file .env and use the library dotenv to read the file .env and load the environment variables.
+
+
+### Run tests
+
+```shell
+mvn test
+```
+
+### Run coverage tests
+
+```shell
+mvn test jacoco:report
+```
+
+
+Access to the file `target/site/jacoco/index.html` to see the coverage report.
+
+
+
+
+### Run Postman tests
+
+```shell
+newman run postman/Enterprise-Service.postman_collection.json -e postman/Enterprise-Service.postman_environment
+```
+
+### Logs and errors
+
+The logs are saved in the file `enterprise-service.log` in the root of the project. And the errors are shown in the console.
+
 
