@@ -34,7 +34,15 @@ jobs:
 workflows:
   build-and-test:
     jobs:
-      - test-java
-    # - deploy:
-    #     requires:
-    #       - test-java
+      # - test-java
+      # - deploy:
+      #     requires:
+      #       - test-java
+
+      - run:
+          name: Caching Maven dependencies
+          command: mvn dependency:go-offline
+
+      - run:
+          name: Run tests with profile
+          command: mvn test -Dspring.profiles.active=test
