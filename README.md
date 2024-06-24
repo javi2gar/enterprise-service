@@ -149,7 +149,7 @@ In <span style=color:DarkOrange;>*_Postman_*</span> we have created a collection
 And the results of the tests are saved in the folder `newman_report`. The comamnd to run the tests is:
 
 ```shell
-newman run postman/Enterprise-Service.postman_collection.json -e postman/Enterprise-Service.postman_environment -r htmlextra --reporter-htmlextra-export postman/newman_report/Enterprice-Service-report.html
+newman run postman/Enterprice-Service.postman_collection.json -e postman/ZARA_Local.postman_environment.json -r htmlextra --reporter-htmlextra-export postman/newman_report/Enterprice-Service-report.html
 ```
 Note: The environment file is not necessary, but it is used to define the variables that are used in the tests. And you need to have the newman installed.
 
@@ -213,7 +213,7 @@ git clone https://github.com/javi2gar/enterprise-service.git
 ### Requirements
 
 * Java 17
-* Maven
+* Maven 3.6.3 or later
 
 ### Run the project
 Go to the root of the project and run the following command:
@@ -239,13 +239,13 @@ In thi case you can hide on file .env and use the library dotenv to read the fil
 ### Run tests
 
 ```shell
-mvn test
+./mvnw test
 ```
 
 ### Run coverage tests
 
 ```shell
-mvn test jacoco:report
+./mvnw test jacoco:report
 ```
 
 
@@ -257,11 +257,84 @@ Access to the file `target/site/jacoco/index.html` to see the coverage report.
 ### Run Postman tests
 
 ```shell
-newman run postman/Enterprise-Service.postman_collection.json -e postman/Enterprise-Service.postman_environment
+newman run postman/Enterprice-Service.postman_collection.json -e postman/ZARA_Local.postman_environment.json 
+
 ```
 
 ### Logs and errors
 
 The logs are saved in the file `enterprise-service.log` in the root of the project. And the errors are shown in the console.
 
-
+```
+.
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   ├── com
+│   │   │   │   ├── enterprise
+│   │   │   │   │   ├── application
+│   │   │   │   │   │   ├── port
+│   │   │   │   │   │   │   ├── in
+│   │   │   │   │   │   │   │   ├── PriceService.java
+│   │   │   │   │   │   │   │   ├── ProductService.java
+│   │   │   │   │   │   │   │   └── BrandService.java
+│   │   │   │   │   │   │   └── out
+│   │   │   │   │   │   │       ├── PriceRepository.java
+│   │   │   │   │   │   │       ├── ProductRepository.java
+│   │   │   │   │   │   │       └── BrandRepository.java
+│   │   │   │   │   │   ├── service
+│   │   │   │   │   │   │   ├── PriceServiceImpl.java
+│   │   │   │   │   │   │   ├── ProductServiceImpl.java
+│   │   │   │   │   │   │   └── BrandServiceImpl.java
+│   │   │   │   │   │   └── domain
+│   │   │   │   │   │       ├── Price.java
+│   │   │   │   │   │       ├── Product.java
+│   │   │   │   │   │       └── Brand.java
+│   │   │   │   │   └── adapter
+│   │   │   │   │       ├── in
+│   │   │   │   │       │   ├── web
+│   │   │   │   │       │   │   ├── PriceController.java
+│   │   │   │   │       │   │   ├── ProductController.java
+│   │   │   │   │       │   │   └── BrandController.java
+│   │   │   │   │       └── out
+│   │   │   │   │           ├── persistence
+│   │   │   │   │           │   ├── jpa
+│   │   │   │   │           │   │   ├── PriceJpaRepository.java
+│   │   │   │   │           │   │   ├── ProductJpaRepository.java
+│   │   │   │   │           │   │   └── BrandJpaRepository.java
+│   │   │   │   │           └── rest
+│   │   │   │   │               ├── PriceRestClient.java
+│   │   │   │   │               ├── ProductRestClient.java
+│   │   │   │   │               └── BrandRestClient.java
+│   │   ├── resources
+│   │   │   ├── application.properties
+│   ├── test
+│   │   ├── java
+│   │   │   ├── com
+│   │   │   │   ├── enterprise
+│   │   │   │   │   ├── application
+│   │   │   │   │   │   ├── service
+│   │   │   │   │   │   │   ├── PriceServiceImplTest.java
+│   │   │   │   │   │   │   ├── ProductServiceImplTest.java
+│   │   │   │   │   │   │   └── BrandServiceImplTest.java
+│   │   │   │   │   ├── adapter
+│   │   │   │   │   │   ├── in
+│   │   │   │   │   │   │   ├── web
+│   │   │   │   │   │   │   │   ├── PriceControllerTest.java
+│   │   │   │   │   │   │   │   ├── ProductControllerTest.java
+│   │   │   │   │   │   │   │   └── BrandControllerTest.java
+│   │   │   │   │   │   └── out
+│   │   │   │   │   │       ├── persistence
+│   │   │   │   │   │       │   ├── jpa
+│   │   │   │   │   │       │   │   ├── PriceJpaRepositoryTest.java
+│   │   │   │   │   │       │   │   ├── ProductJpaRepositoryTest.java
+│   │   │   │   │   │       │   │   └── BrandJpaRepositoryTest.java
+│   │   │   │   │   │       └── rest
+│   │   │   │   │   │           ├── PriceRestClientTest.java
+│   │   │   │   │   │           ├── ProductRestClientTest.java
+│   │   │   │   │   │           └── BrandRestClientTest.java
+│   │   ├── resources
+│   │   │   ├── application-test.properties
+├── pom.xml
+└── .gitignore
+```
