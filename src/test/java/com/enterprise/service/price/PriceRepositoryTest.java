@@ -1,9 +1,9 @@
 package com.enterprise.service.price;
 
-import com.enterprise.service.adapter.out.persistence.jpa.brand.BrandEntity;
-import com.enterprise.service.adapter.out.persistence.jpa.price.PriceEntity;
-import com.enterprise.service.adapter.out.persistence.jpa.price.PriceRepository;
-import com.enterprise.service.adapter.out.persistence.jpa.product.ProductEntity;
+import com.enterprise.service.infrastructure.entity.brand.BrandEntity;
+import com.enterprise.service.infrastructure.entity.price.PriceEntity;
+import com.enterprise.service.infrastructure.entity.product.ProductEntity;
+import com.enterprise.service.infrastructure.repository.price.PriceRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

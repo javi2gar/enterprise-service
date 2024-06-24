@@ -266,75 +266,31 @@ newman run postman/Enterprice-Service.postman_collection.json -e postman/ZARA_Lo
 The logs are saved in the file `enterprise-service.log` in the root of the project. And the errors are shown in the console.
 
 ```
-.
-├── src
-│   ├── main
-│   │   ├── java
-│   │   │   ├── com
-│   │   │   │   ├── enterprise
-│   │   │   │   │   ├── application
-│   │   │   │   │   │   ├── port
-│   │   │   │   │   │   │   ├── in
-│   │   │   │   │   │   │   │   ├── PriceService.java
-│   │   │   │   │   │   │   │   ├── ProductService.java
-│   │   │   │   │   │   │   │   └── BrandService.java
-│   │   │   │   │   │   │   └── out
-│   │   │   │   │   │   │       ├── PriceRepository.java
-│   │   │   │   │   │   │       ├── ProductRepository.java
-│   │   │   │   │   │   │       └── BrandRepository.java
-│   │   │   │   │   │   ├── service
-│   │   │   │   │   │   │   ├── PriceServiceImpl.java
-│   │   │   │   │   │   │   ├── ProductServiceImpl.java
-│   │   │   │   │   │   │   └── BrandServiceImpl.java
-│   │   │   │   │   │   └── domain
-│   │   │   │   │   │       ├── Price.java
-│   │   │   │   │   │       ├── Product.java
-│   │   │   │   │   │       └── Brand.java
-│   │   │   │   │   └── adapter
-│   │   │   │   │       ├── in
-│   │   │   │   │       │   ├── web
-│   │   │   │   │       │   │   ├── PriceController.java
-│   │   │   │   │       │   │   ├── ProductController.java
-│   │   │   │   │       │   │   └── BrandController.java
-│   │   │   │   │       └── out
-│   │   │   │   │           ├── persistence
-│   │   │   │   │           │   ├── jpa
-│   │   │   │   │           │   │   ├── PriceJpaRepository.java
-│   │   │   │   │           │   │   ├── ProductJpaRepository.java
-│   │   │   │   │           │   │   └── BrandJpaRepository.java
-│   │   │   │   │           └── rest
-│   │   │   │   │               ├── PriceRestClient.java
-│   │   │   │   │               ├── ProductRestClient.java
-│   │   │   │   │               └── BrandRestClient.java
-│   │   ├── resources
-│   │   │   ├── application.properties
-│   ├── test
-│   │   ├── java
-│   │   │   ├── com
-│   │   │   │   ├── enterprise
-│   │   │   │   │   ├── application
-│   │   │   │   │   │   ├── service
-│   │   │   │   │   │   │   ├── PriceServiceImplTest.java
-│   │   │   │   │   │   │   ├── ProductServiceImplTest.java
-│   │   │   │   │   │   │   └── BrandServiceImplTest.java
-│   │   │   │   │   ├── adapter
-│   │   │   │   │   │   ├── in
-│   │   │   │   │   │   │   ├── web
-│   │   │   │   │   │   │   │   ├── PriceControllerTest.java
-│   │   │   │   │   │   │   │   ├── ProductControllerTest.java
-│   │   │   │   │   │   │   │   └── BrandControllerTest.java
-│   │   │   │   │   │   └── out
-│   │   │   │   │   │       ├── persistence
-│   │   │   │   │   │       │   ├── jpa
-│   │   │   │   │   │       │   │   ├── PriceJpaRepositoryTest.java
-│   │   │   │   │   │       │   │   ├── ProductJpaRepositoryTest.java
-│   │   │   │   │   │       │   │   └── BrandJpaRepositoryTest.java
-│   │   │   │   │   │       └── rest
-│   │   │   │   │   │           ├── PriceRestClientTest.java
-│   │   │   │   │   │           ├── ProductRestClientTest.java
-│   │   │   │   │   │           └── BrandRestClientTest.java
-│   │   ├── resources
-│   │   │   ├── application-test.properties
-├── pom.xml
-└── .gitignore
+├── application
+│   └── service
+├── domain
+│   ├── model
+│   └── port
+│       ├── in
+│       │   └── read
+│       └── out
+│           └── read
+└── infrastructure
+    ├── adapter
+    │   └── jpa
+    │       └── price
+    ├── config
+    ├── controller
+    │   └── price
+    ├── entity
+    │   ├── brand
+    │   ├── fee
+    │   ├── price
+    │   └── product
+    ├── exception
+    ├── mapper
+    │   └── price
+    ├── repository
+    │   └── price
+    └── utils
 ```
