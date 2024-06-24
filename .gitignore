@@ -36,3 +36,5 @@ build/
 /db/
 /log/
 .env
+/postman/newman_report/
+/exportToHTML/
