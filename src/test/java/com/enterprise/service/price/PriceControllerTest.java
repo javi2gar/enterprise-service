@@ -1,8 +1,8 @@
 package com.enterprise.service.price;
 
-import com.enterprise.service.adapter.in.rest.price.PriceController;
-import com.enterprise.service.application.domain.Price;
 import com.enterprise.service.application.service.PriceService;
+import com.enterprise.service.domain.model.Price;
+import com.enterprise.service.infrastructure.controller.price.PriceController;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
