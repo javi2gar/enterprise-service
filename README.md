@@ -133,7 +133,6 @@ And the report is saved in the folder `exportToHTML/index.html`.
 
 ![img.png](src/main/resources/static/images/coverage_ide_report.png)
 
-
 ### JaCoCo
 The project has been configured with <span style=color:LightGreen;>*_JaCoCo_*</span> to check the coverage of the tests.
 
