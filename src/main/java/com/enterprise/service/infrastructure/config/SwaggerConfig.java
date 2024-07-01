@@ -24,7 +24,6 @@ public class SwaggerConfig {
                         .version("0.0.1-SNAPSHOT")
                         .contact(new Contact()
                                 .name("Javier García")
-                                .email("javi2gar@gmail.com")
                                 .url("https://enterprise-service-api.com"))
                         .termsOfService("https://enterprise-service-api.com"))
                 .servers(List.of(
