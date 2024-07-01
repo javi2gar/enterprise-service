@@ -11,7 +11,6 @@ and other Internal Services (EIS) to obtain item information.
 
 ![logo.png](src/main/resources/static/images/logo.png)
 
-
 ## The purpose of the API
 
 Provide updated price information for an external consumer, 
@@ -132,7 +131,6 @@ And the report is saved in the folder `exportToHTML/index.html`.
 
 
 ![img.png](src/main/resources/static/images/coverage_ide_report.png)
-
 
 ### JaCoCo
 The project has been configured with <span style=color:LightGreen;>*_JaCoCo_*</span> to check the coverage of the tests.
