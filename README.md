@@ -265,6 +265,8 @@ newman run postman/Enterprice-Service.postman_collection.json -e postman/ZARA_Lo
 
 The logs are saved in the file `enterprise-service.log` in the root of the project. And the errors are shown in the console.
 
+## Project structure
+
 ```
 ├── application
 │   └── service
