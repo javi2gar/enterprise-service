@@ -212,7 +212,7 @@ git clone https://github.com/javi2gar/enterprise-service.git
 
 ### Requirements
 
-* Java 17
+* Java 21
 * Maven 3.6.3 or later
 
 ### Run the project
