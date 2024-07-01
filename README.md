@@ -11,7 +11,6 @@ and other Internal Services (EIS) to obtain item information.
 
 ![logo.png](src/main/resources/static/images/logo.png)
 
-
 ## The purpose of the API
 
 Provide updated price information for an external consumer, 
